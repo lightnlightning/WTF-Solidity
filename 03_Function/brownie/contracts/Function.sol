@@ -35,6 +35,7 @@ contract FunctionTypes{
     // payable: 递钱，能给合约支付eth的函数
     function minusPayable() external payable returns(uint256 balance) {
         minus();    
-        balance = address(this).balance;
+        balance = address(this).balance;   
     }
+
 }
