@@ -1,0 +1,17 @@
+# exclude SafeMath when calculating test coverage
+# https://eth-brownie.readthedocs.io/en/v1.10.3/config.html#exclude_paths
+reports:
+  exclude_contracts:
+    - SafeMath
+
+# dotenv: .env
+# networks:  #  指定使用 goerli测试网 WEB3_INFURA_PROJECT_ID是上方infura截图中框出的api_key
+#   goerli:
+#     host: https://goerli.infura.io/v3/${WEB3_INFURA_PROJECT_ID}
+    
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.8.3
+compiler:
+    solc:
+        remappings:
+            - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.3'
